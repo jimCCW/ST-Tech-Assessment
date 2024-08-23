@@ -48,7 +48,9 @@ npm run start
 
 5. Open your web browser and navigate to: http://localhost:3000/
 
-6. To run the test:
+6. The data.csv file is provided in the sample-data folder for testing the application.
+
+7. To run the test:
 
 ```bash
 npm run test
