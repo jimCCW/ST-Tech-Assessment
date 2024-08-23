@@ -6,8 +6,6 @@ import csv from "csv-parser";
 const dataFilePathname = "data";
 const dataFilename = "data.csv";
 
-let uploadedData: any[] = [];
-
 // Read and parse CSV
 const processCSV = (filePath: string): Promise<any[]> => {
   return new Promise((resolve, reject) => {
@@ -68,7 +66,7 @@ export const dataUpload = async (
   try {
     await moveFile(file, filePath);
 
-    uploadedData = await processCSV(filePath);
+    const uploadedData = await processCSV(filePath);
     res.status(200).json({
       success: true,
       data: uploadedData,
